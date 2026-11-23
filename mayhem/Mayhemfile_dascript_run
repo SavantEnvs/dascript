@@ -1,0 +1,10 @@
+project: savantenvs/dascript
+target: dascript-run
+
+cmds:
+  - cmd: /mayhem/bin/fuzz_dascript_run
+    libfuzzer: true
+    timeout: 15
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/dascript-run/testsuite

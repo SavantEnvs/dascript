@@ -1,0 +1,7 @@
+# Build context for mayhem/Dockerfile: the full repo incl. .git, minus local build outputs.
+build/
+lib/
+bin/
+**/__pycache__/
+.DS_Store
+*.swp

@@ -1,0 +1,15 @@
+//! indexing a value that is not an array or a container does not
+//! compile
+// invalid index operations
+// verifies compiler rejects indexing non-array/non-container types
+options gen2
+expect 30931:2  // cant_index
+
+def test_index(a : int) {
+    a[1]        // not a ref (and not an array)
+}
+
+def test {
+    let a : int
+    a[0]    // not an array
+}

@@ -1,0 +1,10 @@
+project: savantenvs/dascript
+target: dascript-json
+
+cmds:
+  - cmd: /mayhem/bin/fuzz_sscan_json
+    libfuzzer: true
+    timeout: 5
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/dascript-json/testsuite

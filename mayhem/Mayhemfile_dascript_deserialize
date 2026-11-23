@@ -1,0 +1,10 @@
+project: savantenvs/dascript
+target: dascript-deserialize
+
+cmds:
+  - cmd: /mayhem/bin/fuzz_deserialize
+    libfuzzer: true
+    timeout: 15
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/dascript-deserialize/testsuite

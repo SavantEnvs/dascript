@@ -1,0 +1,10 @@
+project: savantenvs/dascript
+target: isutf8text
+
+cmds:
+  - cmd: /mayhem/bin/fuzz_isUtf8Text
+    libfuzzer: true
+    timeout: 5
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/isutf8text/testsuite
